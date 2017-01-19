@@ -1,3 +1,5 @@
+var numberRemaining = -1;
+
 function processNumbers(){
     var oclcContainer = $("#oclcNumbers");
     var oclcArray = oclcContainer.val().split("\n");
@@ -42,6 +44,8 @@ function getBib(oclcNumber, recepient){
             if(result.substring(0,6) == "<br />"){
                 recepient.html('<td>' + oclcNumber + '</td><td>' + "TO" + '</td>');
             }else{
+                numberRemaining--;
+                $('#remaining').text(numberRemaining);
                 recepient.html('<td>' + oclcNumber + '</td><td>' + result + '</td>');
             }
         }
@@ -70,6 +74,8 @@ function replaceBib(element){
             if(result.substring(0,6) == "<br />"){
                 element.text("TO");
             }else{
+                numberRemaining--;
+                $('#remaining').text(numberRemaining);
                 element.text(result);
             }
         }
