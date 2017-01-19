@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="JS/jquery-ui.min.js"></script>
+    <script src="JS/bootstrap.min.js"></script>
+    <script src="JS/JS.js"></script>
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS/MarcToBib.css">
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h4><label for="oclcNumbers">Testing</label></h4>
+            <button id="conversionButton" onclick="processNumbers()">Convert</button>
+            <br><br>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <textarea id="oclcNumbers"></textarea>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <div id="outputPanel"></div>
+        </div>
+        <div class="col-md-8">
+
+        </div>
+    </div>
+    <div id="testArea"></div>
+</div>
+</body>
+</html>

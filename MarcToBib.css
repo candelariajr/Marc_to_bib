@@ -1,0 +1,21 @@
+textarea{
+    width: 400px;
+    height: 500px;
+}
+
+.table-striped>tbody>tr:nth-child(odd)>td,
+.table-striped>tbody>tr:nth-child(odd)>th {
+    background-color: #eaeaea;
+}
+
+td{
+    width: 150px;
+}
+
+tr {
+    width: 300px;
+}
+
+table tr td {
+    border: 1px solid gray;
+}
