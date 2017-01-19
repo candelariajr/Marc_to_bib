@@ -1,6 +1,10 @@
 function processNumbers(){
     var oclcContainer = $("#oclcNumbers");
     var oclcArray = oclcContainer.val().split("\n");
+    numberRemaining = oclcArray.length;
+    var numberRemainingContainer = $('#remaining');
+    numberRemainingContainer.text(numberRemaining);
+    numberRemainingContainer.show();
     $("#conversionButton").hide();
     oclcContainer.hide(200);
     var table = $('<table>');
