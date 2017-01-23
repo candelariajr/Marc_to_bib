@@ -1,6 +1,7 @@
 var numberRemaining = -1;
 
 function processNumbers(){
+    $('#refreshButton').hide();
     var oclcContainer = $("#oclcNumbers");
     var oclcArray = oclcContainer.val().split("\n");
     numberRemaining = oclcArray.length;
@@ -64,6 +65,9 @@ function beginRecon(){
     for(var i = 0; i < eligibleReconElements.length; i++){
         replaceBib(eligibleReconElements[i]);
     }
+    if(eligibleReconElements.length == 0){
+        $('#refreshButton').show();
+    }
 }
 
 function replaceBib(element){
@@ -80,4 +84,15 @@ function replaceBib(element){
             }
         }
     });
+}
+
+function refresh(){
+    //location.reload();
+    $('#refreshButton').hide();
+    $("#conversionButton").show();
+    var oclc = $("#oclcNumbers");
+    $('#outputPanel').html('');
+    oclc.val('');
+    oclc.show();
+    numberRemaining = -1;
 }
